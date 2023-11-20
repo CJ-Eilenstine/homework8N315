@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Caveat;
+  src: url(../assets/fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(../assets/fonts/Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Lato-Light;
+  src: url(../assets/fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Lato-Italic;
+  src: url(../assets/fonts/Lato/Lato-Italic.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato-Black;
+  src: url(../assets/fonts/Lato/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: Lato-Light-Italic;
+  src: url(../assets/fonts/Lato/Lato-LightItalic.ttf);
+}
+
+// Imports
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "structure.scss";
+@import "nav.scss";
+@import "footer.scss";
+@import "home.scss";
+@import "login.scss";
+@import "browse.scss";

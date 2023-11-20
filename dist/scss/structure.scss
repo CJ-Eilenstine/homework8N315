@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.site-wrapper {
+  position: relative;
+  min-height: 100vh;
+
+  .site-wrapper {
+    position: relative;
+    min-height: 100vh;
+    #app {
+      padding-bottom: 1rem;
+      flex: 1;
+      z-index: -999;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 10px;
+  }
+}

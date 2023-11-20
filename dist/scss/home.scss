@@ -1,0 +1,97 @@
+.home-wrapper {
+  // position: absolute;
+  // top: 0;
+  margin-top: -100px;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(242, 92, 84, 0.6),
+      rgba(242, 92, 84, 0.6)
+    ),
+    url(../assets/images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+  }
+
+  .home-title {
+    min-height: 360px;
+    min-width: 360px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $site-yellow;
+    border-radius: 50%;
+    z-index: 99;
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 24px;
+      font-family: $cav-bold;
+    }
+    p {
+      max-width: 162px;
+      font-family: $lato-reg;
+      font-size: 13px;
+    }
+  }
+
+  .welcome-home {
+    position: absolute;
+    min-width: 170px;
+    min-height: 170px;
+    top: 150px;
+    right: 450px;
+    background-color: $site-pink;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 5;
+
+    p {
+      font-size: 10px;
+      font-family: $lato-italic;
+      max-width: 106px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-wrapper {
+    .home-title {
+      min-height: 260px;
+      min-width: 260px;
+      max-height: 260px;
+      max-width: 260px;
+    }
+
+    .welcome-home {
+      position: absolute;
+      min-width: 122px;
+      min-height: 122px;
+      max-width: 122px;
+      max-height: 122px;
+      top: 18%;
+      right: 10%;
+
+      p {
+        font-size: 8px;
+        width: 82px;
+      }
+    }
+  }
+}

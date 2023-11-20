@@ -1,0 +1,586 @@
+@font-face {
+  font-family: Caveat;
+  src: url(../assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(../assets/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Lato-Light;
+  src: url(../assets/fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(../assets/fonts/Lato/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Black;
+  src: url(../assets/fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: Lato-Light-Italic;
+  src: url(../assets/fonts/Lato/Lato-LightItalic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.site-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+.site-wrapper .site-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+.site-wrapper .site-wrapper #app {
+  padding-bottom: 1rem;
+  flex: 1;
+  z-index: -999;
+}
+
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 10px;
+  }
+}
+.nav-holder {
+  width: 100vw;
+  min-height: 100px;
+  background-color: transparent;
+  z-index: 999;
+}
+.nav-holder nav {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 999;
+}
+.nav-holder .logo {
+  max-height: 55px;
+  z-index: 999;
+}
+.nav-holder ul {
+  width: 552.5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  z-index: 999;
+}
+.nav-holder ul li a {
+  text-decoration: none;
+  font-family: Caveat;
+  font-size: 25px;
+  color: #000;
+}
+.nav-holder ul li .login {
+  padding: 10px 52px;
+  background-color: #ffd972;
+  border-radius: 80px;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
+}
+.nav-holder ul li .active {
+  border-bottom: solid #000 3px;
+}
+.nav-holder .hamburger {
+  margin: auto 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  max-height: 20px;
+  max-width: 32px;
+  z-index: 999;
+}
+.nav-holder .hamburger div {
+  width: 32px;
+  height: 2px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.8s;
+}
+.nav-holder .open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 4px);
+  position: absolute;
+  z-index: 999;
+}
+.nav-holder .open .bar2 {
+  opacity: 0;
+  z-index: 999;
+}
+.nav-holder .open .bar3 {
+  transform: rotate(45deg) translate(-6px, -4px);
+  position: absolute;
+  z-index: 999;
+}
+.nav-holder .open .mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 100;
+  background-color: rgb(252, 188, 184);
+  width: 100vw;
+}
+.nav-holder .mobile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.nav-holder .mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 770px) {
+  .nav-holder nav ul {
+    display: none;
+  }
+  .nav-holder .hamburger {
+    display: block;
+  }
+}
+footer {
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: absolute;
+  bottom: 0px; /* Stick the footer to the bottom */
+  width: 100%; /* Full width */
+  z-index: 999;
+}
+footer .copyright {
+  font-size: 15px;
+  font-family: Lato-Italic;
+  color: #393939;
+  margin-right: 1rem;
+}
+footer .anchors {
+  font-family: Lato-Italic;
+  text-decoration: none;
+  font-size: 15px;
+  min-width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .anchors a {
+  text-decoration: none;
+  color: #393939;
+  margin-right: 5px;
+  margin-right: 1rem;
+}
+footer .social {
+  height: 19px;
+  width: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+footer .social img {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 770px) {
+  footer .copyright {
+    font-size: 1rem;
+  }
+  footer .anchors {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+  }
+  footer .anchors {
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+  footer .social {
+    margin-right: 1rem;
+  }
+  footer .social img {
+    margin-right: 1rem;
+  }
+}
+.home-wrapper {
+  margin-top: -100px;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../assets/images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-wrapper .circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 700px;
+}
+.home-wrapper .home-title {
+  min-height: 360px;
+  min-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffd972;
+  border-radius: 50%;
+  z-index: 99;
+}
+.home-wrapper .home-title h1 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  font-family: Caveat-Bold;
+}
+.home-wrapper .home-title p {
+  max-width: 162px;
+  font-family: Lato;
+  font-size: 13px;
+}
+.home-wrapper .welcome-home {
+  position: absolute;
+  min-width: 170px;
+  min-height: 170px;
+  top: 150px;
+  right: 450px;
+  background-color: #fcbcb8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+}
+.home-wrapper .welcome-home p {
+  font-size: 10px;
+  font-family: Lato-Italic;
+  max-width: 106px;
+}
+
+@media screen and (max-width: 600px) {
+  .home-wrapper .home-title {
+    min-height: 260px;
+    min-width: 260px;
+    max-height: 260px;
+    max-width: 260px;
+  }
+  .home-wrapper .welcome-home {
+    position: absolute;
+    min-width: 122px;
+    min-height: 122px;
+    max-width: 122px;
+    max-height: 122px;
+    top: 18%;
+    right: 10%;
+  }
+  .home-wrapper .welcome-home p {
+    font-size: 8px;
+    width: 82px;
+  }
+}
+.login-wrapper {
+  position: relative;
+  margin-top: -100px;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffd972;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 170px;
+}
+.login-wrapper .login {
+  min-width: 50%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 115px;
+  margin-top: 170px;
+}
+.login-wrapper .login h1 {
+  font-size: 30px;
+  font-family: Lato-Black;
+  margin-bottom: 50px;
+  align-self: flex-start;
+}
+.login-wrapper .login input {
+  border: none;
+  border-bottom: 3px solid #000;
+  background-color: transparent;
+  min-width: 100%;
+  margin-bottom: 45px;
+}
+.login-wrapper .login input::placeholder {
+  color: #000;
+  font-family: Lato-Light;
+  font-size: 12px;
+}
+.login-wrapper .login input:focus {
+  outline: none;
+}
+.login-wrapper .login a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  font-family: Caveat;
+  padding: 10px 76px;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 100px;
+  margin-top: 5px;
+}
+.login-wrapper .sign-up {
+  min-width: 50%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.login-wrapper .sign-up p {
+  font-family: Lato-Light;
+  font-size: 12px;
+  align-self: flex-start;
+}
+.login-wrapper .sign-up h1 {
+  font-size: 30px;
+  font-family: Lato-Black;
+  margin-bottom: 50px;
+  align-self: flex-start;
+}
+.login-wrapper .sign-up input {
+  border: none;
+  border-bottom: 3px solid #000;
+  background-color: transparent;
+  min-width: 100%;
+  margin-bottom: 45px;
+}
+.login-wrapper .sign-up input::placeholder {
+  color: #000;
+  font-family: Lato-Light;
+  font-size: 12px;
+}
+.login-wrapper .sign-up input:focus {
+  outline: none;
+}
+.login-wrapper .sign-up a,
+.login-wrapper .sign-up button {
+  background-color: transparent;
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  font-family: Caveat;
+  padding: 10px 76px;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 100px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 770px) {
+  .login-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+  .login-wrapper .login {
+    min-width: 30%;
+    margin-top: 150px;
+  }
+  .login-wrapper .sign-up {
+    min-width: 30%;
+    margin-top: 150px;
+  }
+}
+.browse-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../assets/images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.browse-wrapper .recipe-list {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+.browse-wrapper .recipe-list p {
+  align-self: flex-start;
+  font-size: 20px;
+  font-family: Caveat-Bold;
+  margin-bottom: 30px;
+}
+.browse-wrapper .recipe-list div {
+  width: 100%;
+}
+.browse-wrapper .recipe-list div .img-holder {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+  min-height: 150px;
+  border-radius: 24px;
+}
+.browse-wrapper .recipe-list div .img-pizza {
+  background-image: url(../assets/images/recipe-pizza.jpg);
+}
+.browse-wrapper .recipe-list div .img-burger {
+  background-image: url(../assets/images/recipe-burger.jpg);
+}
+.browse-wrapper .recipe-list div .img-chicken {
+  background-image: url(../assets/images/recipe-pilaf.jpg);
+}
+.browse-wrapper .recipe-list div .img-chow {
+  background-image: url(../assets/images/recipe-chowmein.jpg);
+}
+.browse-wrapper .recipe-list div .cooking-instr {
+  min-height: 160px;
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 24px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 15px 42px;
+}
+.browse-wrapper .recipe-list div .cooking-instr h3 {
+  font-family: Lato-Black;
+  font-size: 10px;
+  border-bottom: solid 2px #000;
+}
+.browse-wrapper .recipe-list div .cooking-instr p {
+  font-family: Lato;
+  font-size: 8px;
+}
+.browse-wrapper .recipe-list div .cooking-instr .cook-time {
+  max-width: 70px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.browse-wrapper .recipe-list div .cooking-instr .cook-time .cook-time-img {
+  background-image: url(../assets/images/time.svg);
+  width: 22px;
+  height: 24px;
+}
+.browse-wrapper .recipe-list div .cooking-instr .cook-time p {
+  font-family: Lato;
+  font-size: 8px;
+  margin: auto;
+}
+.browse-wrapper .recipe-list div .cooking-instr .serving-size {
+  min-width: 50px;
+  max-width: 75px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.browse-wrapper .recipe-list div .cooking-instr .serving-size .serving-size-img {
+  background-image: url(../assets/images/servings.svg);
+  width: 22px;
+  height: 24px;
+}
+.browse-wrapper .recipe-list div .cooking-instr .serving-size p {
+  font-family: Lato;
+  font-size: 8px;
+  margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .browse-wrapper .recipe-list {
+    width: 90%;
+  }
+  .browse-wrapper .recipe-list .recipe-holder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .browse-wrapper .recipe-list .recipe-holder .img-holder {
+    min-width: 300px;
+    min-height: 263px;
+    border-radius: 24px;
+  }
+  .browse-wrapper .recipe-list .recipe-holder .cooking-instr {
+    min-height: 263px;
+    min-width: 224px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 950px) {
+  .browse-wrapper .recipe-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+  }
+  .browse-wrapper .recipe-list .recipe-holder {
+    width: 100%;
+  }
+  .browse-wrapper .recipe-list .recipe-holder .img-holder {
+    max-width: 300px;
+  }
+  .browse-wrapper .recipe-list .recipe-holder .cooking-instr {
+    max-width: 224px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

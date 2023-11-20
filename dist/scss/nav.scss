@@ -1,0 +1,137 @@
+.nav-holder {
+  width: 100vw;
+  min-height: 100px;
+  background-color: transparent;
+  z-index: 999;
+
+  nav {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 999;
+  }
+
+  .logo {
+    max-height: 55px;
+    z-index: 999;
+
+    img {
+      // max-height: 55px;
+    }
+  }
+
+  ul {
+    width: 552.5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    z-index: 999;
+
+    li {
+      a {
+        text-decoration: none;
+        font-family: $cav-reg;
+        font-size: 25px;
+        color: $site-black;
+      }
+
+      .login {
+        padding: 10px 52px;
+        background-color: $site-yellow;
+        border-radius: 80px;
+        box-shadow: 0px 10px 6px rgba($color: #000000, $alpha: 0.16);
+      }
+
+      .active {
+        border-bottom: solid $site-black 3px;
+      }
+    }
+  }
+
+  // Mobile Menu
+
+  .hamburger {
+    margin: auto 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    max-height: 20px;
+    max-width: 32px;
+    z-index: 999;
+
+    div {
+      width: 32px;
+      height: 2px;
+      background-color: $site-black;
+      margin: 6px 0;
+      transition: 0.8s;
+    }
+  }
+
+  .open {
+    .bar1 {
+      transform: rotate(-45deg) translate(-6px, 4px);
+      position: absolute;
+      z-index: 999;
+    }
+
+    .bar2 {
+      opacity: 0;
+      // position: absolute;
+      z-index: 999;
+    }
+
+    .bar3 {
+      transform: rotate(45deg) translate(-6px, -4px);
+      position: absolute;
+      z-index: 999;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index: 100;
+      background-color: rgba(252, 188, 184, 1);
+      width: 100vw;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  // .nav-holder nav .logo {
+  //     max-height: 47.5px;
+  // }
+
+  .nav-holder {
+    nav {
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .nav-holder .hamburger {
+    display: block;
+  }
+}

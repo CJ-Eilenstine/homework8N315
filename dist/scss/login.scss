@@ -1,0 +1,135 @@
+.login-wrapper {
+  position: relative;
+  margin-top: -100px;
+  top: 0;
+  // bottom: 50px;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $site-yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  // padding: 100px 0;
+  padding-bottom: 170px;
+
+  .login {
+    min-width: 50%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 115px;
+    margin-top: 170px;
+
+    h1 {
+      font-size: 30px;
+      font-family: $lato-black;
+      margin-bottom: 50px;
+      align-self: flex-start;
+    }
+
+    input {
+      border: none;
+      border-bottom: 3px solid $site-black;
+      background-color: transparent;
+      min-width: 100%;
+      margin-bottom: 45px;
+    }
+
+    input::placeholder {
+      color: $site-black;
+      font-family: $lato-light;
+      font-size: 12px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    a {
+      background-color: transparent;
+      text-decoration: none;
+      color: $site-black;
+      font-size: 25px;
+      font-family: $cav-reg;
+      padding: 10px 76px;
+      box-shadow: 0px 10px 6px rgba($color: #000000, $alpha: 0.16);
+      border-radius: 100px;
+      margin-top: 5px;
+    }
+  }
+
+  .sign-up {
+    min-width: 50%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // margin-bottom: 115px;
+
+    p {
+      font-family: $lato-light;
+      font-size: 12px;
+      align-self: flex-start;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-family: $lato-black;
+      margin-bottom: 50px;
+      align-self: flex-start;
+    }
+
+    input {
+      border: none;
+      border-bottom: 3px solid $site-black;
+      background-color: transparent;
+      min-width: 100%;
+      margin-bottom: 45px;
+    }
+
+    input::placeholder {
+      color: $site-black;
+      font-family: $lato-light;
+      font-size: 12px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    a,
+    button {
+      background-color: transparent;
+      text-decoration: none;
+      color: $site-black;
+      font-size: 25px;
+      font-family: $cav-reg;
+      padding: 10px 76px;
+      box-shadow: 0px 10px 6px rgba($color: #000000, $alpha: 0.16);
+      border-radius: 100px;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .login-wrapper {
+    flex-direction: row;
+    align-items: center;
+
+    .login {
+      min-width: 30%;
+      margin-top: 150px;
+      // padding-top: 100px;
+    }
+
+    .sign-up {
+      min-width: 30%;
+      margin-top: 150px;
+    }
+  }
+}
